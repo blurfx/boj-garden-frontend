@@ -20,6 +20,9 @@
         "import",
         "@typescript-eslint"
     ],
+    "globals": {
+        "JSX": "readonly"
+    },
     "rules": {
         "no-unused-vars": "off",
         "no-use-before-define": "off",

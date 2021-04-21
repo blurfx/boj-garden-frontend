@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styled from '@emotion/styled';
-
-const Div = styled.div`
-  color: red;
-`;
+import { Route, Switch } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+import IndexPage from '../pages/indexPage';
+import UserPage from '../pages/user';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Div>Index</Div>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/' exact component={IndexPage} />
+        <Route path='/user/:username' exact component={UserPage} />
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'),
 );
